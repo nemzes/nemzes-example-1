@@ -9,6 +9,8 @@ spec:
         from: master
   components:
     - name: www
+      secrets:
+        - A_SECRET
       src: ./www
       ports:
        - name: http
