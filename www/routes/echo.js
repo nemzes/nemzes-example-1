@@ -33,8 +33,9 @@ router.get('/', function(req, res, next) {
             echoObject.RADIX_COMPONENT = (bodyObj.RADIX_COMPONENT || 'No Radix Component?');
             echoObject.RADIX_ENVIRONMENT = (bodyObj.RADIX_ENVIRONMENT || 'No Radix Environment?');
             echoObject.RADIX_HOSTNAME = (bodyObj.HOSTNAME || 'No Radix Hostname?');
+            echoObject.THIS_HOSTNAME = (hostname || 'No Local Hostname?');
            
-            res.render('echo', { title: 'Echo response', echoObject, thisHost: hostname });
+            res.render('echo', { title: 'Echo response', echoObject });
 
         } else {
 
