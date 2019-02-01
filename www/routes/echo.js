@@ -2,7 +2,9 @@ var express = require('express');
 var router = express.Router();
 var request = require('request');
 var createError = require('http-errors');
+var os = require("os");
 
+var hostname = os.hostname();
 const echoUrl = (process.env.ECHO_URL || 'http://localhost:3000');
 
 var echoOptions = {
@@ -32,7 +34,7 @@ router.get('/', function(req, res, next) {
             echoObject.RADIX_ENVIRONMENT = (bodyObj.RADIX_ENVIRONMENT || 'No Radix Environment?');
             echoObject.RADIX_HOSTNAME = (bodyObj.HOSTNAME || 'No Radix Hostname?');
            
-            res.render('echo', { title: 'Echo response', echoObject });
+            res.render('echo', { title: 'Echo response', echoObject, thisHost: hostname });
 
         } else {
 
