@@ -22,7 +22,7 @@ spec:
         limits:
           memory: "96Mi"
           cpu: "200m"
-      replicas: 1
+      replicas: 5
       environmentVariables:
         - environment: production
           variables:
@@ -43,7 +43,7 @@ spec:
         limits:
           memory: "96Mi"
           cpu: "200m"
-      replicas: 1
+      replicas: 20
       environmentVariables:
         - environment: production
           variables:
