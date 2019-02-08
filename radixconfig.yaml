@@ -1,7 +1,7 @@
 apiVersion: radix.equinor.com/v1
 kind: RadixApplication
 metadata:
-  name: nemzes-workshop1
+  name: nemzes-example-1
 spec:
   environments:
     - name: production
@@ -24,7 +24,7 @@ spec:
         limits:
           memory: "96Mi"
           cpu: "200m"
-      replicas: 5
+      replicas: 1
       environmentVariables:
         - environment: production
           variables:
@@ -45,7 +45,7 @@ spec:
         limits:
           memory: "96Mi"
           cpu: "200m"
-      replicas: 20
+      replicas: 1
       environmentVariables:
         - environment: production
           variables:
